@@ -3,331 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Patil Family Diwali Wishes</title>
+<title>Shubh Deepavali — Patil Family</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@400;600&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@400;600;700&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
 <style>
   :root {
     --gold: #d4af37;
     --gold-light: #f5e6a8;
     --gold-deep: #9a7b1c;
-    --ink: #1b0f08;
     --cream: #fff8ec;
-    --maroon: #5c0f1c;
-    --navy: #0d1b3e;
-    --surface: #ffffff;
-    --text: #2a1d14;
-    --muted: #6b5a4a;
-    --border: rgba(154, 123, 28, 0.25);
-    --field: #fffdf7;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --surface: #1a1410;
-      --text: #f5ead2;
-      --muted: #bfae92;
-      --border: rgba(212, 175, 55, 0.3);
-      --field: #241c16;
-      --cream: #231a13;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --surface: #1a1410;
-    --text: #f5ead2;
-    --muted: #bfae92;
-    --border: rgba(212, 175, 55, 0.3);
-    --field: #241c16;
-    --cream: #231a13;
+    --c1: #5c0f1c;
+    --c2: #2b0710;
+    --accent: #d4af37;
     color-scheme: dark;
   }
 
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%;
+    min-height: 100vh;
+  }
+
   body {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    background: radial-gradient(circle at top, #2b1a10 0%, #120b07 70%);
-    color: var(--text);
-    min-height: 100vh;
-    padding: env(safe-area-inset-top, 0px) 16px env(safe-area-inset-bottom, 0px);
+    background: radial-gradient(circle at 50% 18%, #2d180f 0%, #140b06 65%, #080402 100%);
+    color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(16px, 4vw, 36px);
+    overflow-x: hidden;
   }
 
-  header {
-    text-align: center;
-    padding: 36px 12px 12px;
-    color: var(--gold-light);
-  }
-  header .eyebrow {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 0.35em;
-    font-size: 12px;
-    color: var(--gold);
-  }
-  header h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: clamp(30px, 6vw, 48px);
-    margin: 8px 0 4px;
-    background: linear-gradient(90deg, #b8860b, #f5e6a8, #d4af37, #f5e6a8, #b8860b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  header p { margin: 0; color: #d9c9a3; font-style: italic; }
-
-  .layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 1100px;
-    margin: 24px auto 48px;
-  }
-  @media (min-width: 900px) {
-    .layout { grid-template-columns: 380px 1fr; align-items: start; }
-  }
-
-  /* Form panel */
-  .panel {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  }
-  .panel h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 15px;
-    letter-spacing: 0.2em;
-    color: var(--gold-deep);
-    margin: 0 0 18px;
-    text-transform: uppercase;
-  }
-  .field { margin-bottom: 16px; }
-  .field label {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
-    font-family: 'Cinzel', serif;
-  }
-  .field input, .field textarea, .field select {
+  /* Centered Card Stage */
+  .card-container {
     width: 100%;
-    font: inherit;
-    font-size: 18px;
-    color: var(--text);
-    background: var(--field);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 10px 12px;
-    outline: none;
-    transition: border-color .2s, box-shadow .2s;
+    max-width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .field input:focus, .field textarea:focus, .field select:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
-  }
-  .field textarea { resize: vertical; min-height: 90px; }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-  .swatches { display: flex; gap: 10px; flex-wrap: wrap; }
-  .swatch {
-    width: 44px; height: 44px; border-radius: 50%;
-    border: 2px solid transparent; cursor: pointer; padding: 0;
-    box-shadow: inset 0 0 0 2px rgba(255,255,255,.15);
-  }
-  .swatch.active { border-color: var(--gold-light); box-shadow: 0 0 0 3px var(--gold); }
-
-  .btns { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
-  .btn {
-    flex: 1;
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    padding: 13px 14px;
-    border-radius: 999px;
-    border: 1px solid var(--gold);
-    cursor: pointer;
-    background: transparent;
-    color: var(--gold-deep);
-  }
-  .btn.primary {
-    background: linear-gradient(135deg, #f5e6a8, #d4af37 50%, #9a7b1c);
-    color: #2a1a05;
-    border: none;
-    font-weight: 600;
-  }
-  .btn:active { transform: scale(.98); }
-
-  /* Card preview */
-  .stage { display: flex; justify-content: center; }
   .card {
-    --c1: #5c0f1c; --c2: #2b0710; --accent: #d4af37;
     position: relative;
     width: 100%;
-    max-width: 560px;
     aspect-ratio: 3 / 4;
-    border-radius: 22px;
+    border-radius: 24px;
     overflow: hidden;
     background:
-      radial-gradient(circle at 50% 0%, rgba(255, 214, 102, .35), transparent 55%),
+      radial-gradient(circle at 50% 0%, rgba(255, 214, 102, .38), transparent 55%),
       linear-gradient(160deg, var(--c1), var(--c2));
-    box-shadow: 0 30px 70px rgba(0,0,0,.55), inset 0 0 0 1px rgba(245, 230, 168, .4);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75),
+                0 0 45px rgba(212, 175, 55, 0.2),
+                inset 0 0 0 1px rgba(245, 230, 168, 0.45);
     color: #fff6dc;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(20px, 5%, 40px) clamp(20px, 7%, 44px);
+    padding: clamp(24px, 6cqi, 44px) clamp(20px, 7cqi, 42px);
     container-type: inline-size;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 35px 95px rgba(0, 0, 0, 0.85),
+                0 0 60px rgba(212, 175, 55, 0.3),
+                inset 0 0 0 1px rgba(245, 230, 168, 0.6);
+  }
+
+  /* Outer and inner borders */
   .card::before {
     content: "";
-    position: absolute; inset: 14px;
-    border: 1px solid rgba(245, 230, 168, .55);
-    border-radius: 14px;
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(245, 230, 168, 0.55);
+    border-radius: 16px;
     pointer-events: none;
   }
+
   .card::after {
     content: "";
-    position: absolute; inset: 20px;
-    border: 1px dashed rgba(245, 230, 168, .25);
-    border-radius: 10px;
+    position: absolute;
+    inset: 20px;
+    border: 1px dashed rgba(245, 230, 168, 0.28);
+    border-radius: 12px;
     pointer-events: none;
   }
-  .card.navy { --c1: #14285a; --c2: #070f24; --accent: #e8c766; }
-  .card.emerald { --c1: #0f4a3a; --c2: #052219; --accent: #e3c776; }
-  .card.saffron { --c1: #b5520f; --c2: #5a2206; --accent: #ffe08a; }
 
+  /* Rotating Mandala Watermark */
   .mandala {
     position: absolute;
-    width: 140%; left: -20%; top: -20%;
-    opacity: .12;
+    width: 140%;
+    left: -20%;
+    top: -20%;
+    opacity: 0.13;
     pointer-events: none;
     animation: spin 120s linear infinite;
   }
-  @keyframes spin { to { transform: rotate(360deg); } }
 
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Card Elements */
   .om {
     font-family: 'Tiro Devanagari Marathi', serif;
     font-size: clamp(34px, 9cqi, 52px);
     color: var(--accent);
-    text-shadow: 0 0 18px rgba(255, 214, 102, .6);
+    text-shadow: 0 0 20px rgba(255, 214, 102, 0.65);
     line-height: 1;
     margin-top: 4px;
+    z-index: 2;
   }
+
   .card .eyebrow {
     font-family: 'Cinzel', serif;
-    letter-spacing: .35em;
-    font-size: clamp(9px, 2.6cqi, 12px);
+    letter-spacing: 0.35em;
+    font-size: clamp(9px, 2.7cqi, 12px);
     color: var(--accent);
     text-transform: uppercase;
+    z-index: 2;
   }
+
+  .title-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+
   .card h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
-    font-size: clamp(30px, 10cqi, 56px);
+    font-size: clamp(32px, 10cqi, 58px);
     line-height: 1.05;
     margin: 6px 0 0;
     background: linear-gradient(180deg, #fff6d0, var(--accent) 60%, #b08a2e);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
   }
+
   .card .family {
     font-family: 'Cinzel', serif;
-    font-size: clamp(12px, 3.6cqi, 17px);
-    letter-spacing: .3em;
+    font-size: clamp(12px, 3.8cqi, 18px);
+    letter-spacing: 0.32em;
     color: #fff6dc;
     margin-top: 4px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   }
+
   .card .msg {
     font-style: italic;
     font-size: clamp(15px, 4.6cqi, 21px);
-    line-height: 1.45;
+    line-height: 1.48;
     max-width: 92%;
     color: #f7ecd0;
     margin: 8px 0;
     white-space: pre-wrap;
-  }
-  .card .divider {
-    width: 60%; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  }
-  .card .from {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(15px, 4.4cqi, 20px);
-    color: var(--accent);
-  }
-  .card .from small {
-    display: block;
-    font-size: .7em;
-    color: #e9dcb8;
-    letter-spacing: .08em;
-    margin-top: 2px;
+    z-index: 2;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   }
 
-  /* Diyas */
-  .diyas {
-    display: flex; gap: 6px; align-items: flex-end; justify-content: center;
-    height: 44px; margin-top: 6px;
+  .bottom-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
   }
+
+  /* Flickering Diyas */
+  .diyas {
+    display: flex;
+    gap: 7px;
+    align-items: flex-end;
+    justify-content: center;
+    height: 44px;
+    margin-top: 6px;
+  }
+
   .diya {
     position: relative;
-    width: 16px; height: 9px;
+    width: 17px;
+    height: 10px;
     background: linear-gradient(#b5651d, #6b3410);
-    border-radius: 0 0 9px 9px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
+
   .diya::before {
     content: "";
     position: absolute;
-    left: 50%; bottom: 7px; transform: translateX(-50%);
-    width: 8px; height: 14px;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 15px;
     background: radial-gradient(ellipse at 50% 80%, #fff7c2 0%, #ffb53b 40%, rgba(255,120,0,0) 75%);
     border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
     animation: flicker 1.8s ease-in-out infinite;
-    filter: drop-shadow(0 0 6px rgba(255, 190, 80, .9));
+    filter: drop-shadow(0 0 7px rgba(255, 190, 80, 0.95));
   }
-  .diya:nth-child(2)::before { animation-delay: .4s; }
-  .diya:nth-child(3)::before { animation-delay: .9s; }
-  .diya:nth-child(4)::before { animation-delay: .2s; }
+
+  .diya:nth-child(2)::before { animation-delay: 0.4s; }
+  .diya:nth-child(3)::before { animation-delay: 0.9s; }
+  .diya:nth-child(4)::before { animation-delay: 0.2s; }
   .diya:nth-child(5)::before { animation-delay: 1.2s; }
+
   @keyframes flicker {
     0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
-    50% { transform: translateX(-50%) scale(.92, 1.06); opacity: .8; }
+    50% { transform: translateX(-50%) scale(0.92, 1.06); opacity: 0.82; }
   }
 
+  .divider {
+    width: 62%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  .card .from {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 4.5cqi, 21px);
+    color: var(--accent);
+  }
+
+  .card .from small {
+    display: block;
+    font-size: 0.72em;
+    color: #e9dcb8;
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+  }
+
+  /* Twinkling Star Sparkles */
   .sparkle {
     position: absolute;
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     background: #fff3b0;
     clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
-    opacity: .0;
+    opacity: 0;
     animation: twinkle 3.2s ease-in-out infinite;
     pointer-events: none;
-  }
-  @keyframes twinkle {
-    0%, 100% { opacity: 0; transform: scale(.4); }
-    50% { opacity: .95; transform: scale(1); }
+    z-index: 1;
   }
 
-  .hint {
-    text-align: center;
-    color: #c9b68d;
-    font-size: 14px;
-    font-style: italic;
-    margin: 14px 0 0;
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.4); }
+    50% { opacity: 0.95; transform: scale(1); }
   }
 
   @media print {
     body { background: none; padding: 0; }
-    header, .panel, .hint, .btns { display: none !important; }
-    .layout { display: block; margin: 0; max-width: none; }
     .card { box-shadow: none; max-width: none; width: 100%; height: 100vh; border-radius: 0; }
     @page { size: A5 portrait; margin: 0; }
   }
@@ -335,152 +271,63 @@
 </head>
 <body>
 
-<header>
-  <div class="eyebrow">With Love &amp; Light</div>
-  <h1>Diwali Wishes</h1>
-  <p>Patil Family Festive Greeting Template</p>
-</header>
+<main class="card-container">
+  <article class="card" id="card">
+    <!-- Spinning Festive Mandala Background -->
+    <svg class="mandala" viewBox="0 0 200 200" aria-hidden="true">
+      <g fill="none" stroke="#f5e6a8" stroke-width="0.8">
+        <circle cx="100" cy="100" r="95"/>
+        <circle cx="100" cy="100" r="80"/>
+        <circle cx="100" cy="100" r="60"/>
+        <circle cx="100" cy="100" r="40"/>
+        <g id="petals"></g>
+      </g>
+    </svg>
 
-<div class="layout">
+    <div class="om">ॐ</div>
+    <div class="eyebrow">✦ Festival of Lights ✦</div>
 
-  <section class="panel" aria-label="Customize your wish">
-    <h2>Personalize</h2>
-
-    <div class="field">
-      <label for="family">Family Name</label>
-      <input id="family" type="text" value="Patil Family" maxlength="40">
+    <div class="title-block">
+      <h3>Shubh Deepavali</h3>
+      <div class="family">PATIL FAMILY</div>
     </div>
 
-    <div class="field">
-      <label for="title">Headline</label>
-      <input id="title" type="text" value="Shubh Deepavali" maxlength="30">
-    </div>
+    <p class="msg">May the festival of lights fill your home with joy, prosperity, and endless blessings.</p>
 
-    <div class="field">
-      <label for="message">Your Message</label>
-      <textarea id="message" maxlength="180">May the festival of lights fill your home with joy, prosperity, and endless blessings.</textarea>
-    </div>
-
-    <div class="row">
-      <div class="field">
-        <label for="from">Sent By</label>
-        <input id="from" type="text" value="From the Patil Family" maxlength="40">
+    <div class="bottom-block">
+      <div class="diyas" aria-hidden="true">
+        <span class="diya"></span>
+        <span class="diya"></span>
+        <span class="diya"></span>
+        <span class="diya"></span>
+        <span class="diya"></span>
       </div>
-      <div class="field">
-        <label for="year">Year</label>
-        <input id="year" type="text" value="2026" maxlength="6">
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="recipient">Recipient (optional)</label>
-      <input id="recipient" type="text" value="To All Our Dear Ones" placeholder="Dear Aai, Dada, Friends..." maxlength="40">
-    </div>
-
-    <div class="field">
-      <label>Color Theme</label>
-      <div class="swatches" role="radiogroup" aria-label="Color theme">
-        <button class="swatch active" style="background: linear-gradient(160deg,#5c0f1c,#2b0710)" data-theme="maroon" aria-label="Maroon and gold" role="radio" aria-checked="true"></button>
-        <button class="swatch" style="background: linear-gradient(160deg,#14285a,#070f24)" data-theme="navy" aria-label="Royal navy" role="radio" aria-checked="false"></button>
-        <button class="swatch" style="background: linear-gradient(160deg,#0f4a3a,#052219)" data-theme="emerald" aria-label="Emerald" role="radio" aria-checked="false"></button>
-        <button class="swatch" style="background: linear-gradient(160deg,#b5520f,#5a2206)" data-theme="saffron" aria-label="Saffron" role="radio" aria-checked="false"></button>
+      <div class="divider"></div>
+      <div class="from">
+        <span>From the Patil Family</span>
+        <small>2026</small>
       </div>
     </div>
-
-    <div class="btns">
-      <button class="btn" id="reset" type="button">Reset</button>
-      <button class="btn primary" id="print" type="button">Print / Save PDF</button>
-    </div>
-  </section>
-
-  <section class="stage" aria-label="Card preview">
-    <div>
-      <article class="card" id="card">
-        <svg class="mandala" viewBox="0 0 200 200" aria-hidden="true">
-          <g fill="none" stroke="#f5e6a8" stroke-width="0.8">
-            <circle cx="100" cy="100" r="95"/>
-            <circle cx="100" cy="100" r="80"/>
-            <circle cx="100" cy="100" r="60"/>
-            <circle cx="100" cy="100" r="40"/>
-            <g id="petals"></g>
-          </g>
-        </svg>
-
-        <div class="om">ॐ</div>
-        <div class="eyebrow" id="pv-eyebrow">✦ Festival of Lights ✦</div>
-
-        <div style="width:100%;display:flex;flex-direction:column;align-items:center;">
-          <div class="eyebrow" id="pv-recipient" style="display:none;margin-bottom:6px;text-transform:none;letter-spacing:.12em;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:clamp(14px,4cqi,18px);"></div>
-          <h3 id="pv-title">Shubh Deepavali</h3>
-          <div class="family" id="pv-family">PATIL FAMILY</div>
-        </div>
-
-        <p class="msg" id="pv-message">May the festival of lights fill your home with joy, prosperity, and endless blessings.</p>
-
-        <div style="width:100%;display:flex;flex-direction:column;align-items:center;gap:10px;">
-          <div class="diyas" aria-hidden="true">
-            <span class="diya"></span><span class="diya"></span><span class="diya"></span><span class="diya"></span><span class="diya"></span>
-          </div>
-          <div class="divider"></div>
-          <div class="from"><span id="pv-from">From the Patil Family</span><small id="pv-year">2026</small></div>
-        </div>
-      </article>
-      <p class="hint">Edit the details on the left. The card updates as you type.</p>
-    </div>
-  </section>
-
-</div>
+  </article>
+</main>
 
 <script>
   (function () {
     var card = document.getElementById('card');
-    var ids = {
-      family: 'pv-family',
-      title: 'pv-title',
-      message: 'pv-message',
-      from: 'pv-from',
-      year: 'pv-year',
-      recipient: 'pv-recipient'
-    };
-    var defaults = {};
-    Object.keys(ids).forEach(function (k) {
-      defaults[k] = document.getElementById(k).value;
-    });
 
-    var DEFAULT_MSG = defaults.message;
-
-    function setText(id, value) {
-      document.getElementById(id).textContent = value;
-    }
-
-    function update() {
-      var fam = document.getElementById('family').value.trim().toUpperCase();
-      setText('pv-family', fam || 'PATIL FAMILY');
-      setText('pv-title', document.getElementById('title').value.trim() || 'Shubh Deepavali');
-      setText('pv-message', document.getElementById('message').value.trim() || DEFAULT_MSG);
-      setText('pv-from', document.getElementById('from').value.trim() || 'With love');
-      setText('pv-year', document.getElementById('year').value.trim());
-      var rec = document.getElementById('recipient').value.trim();
-      var recEl = document.getElementById('pv-recipient');
-      recEl.textContent = rec;
-      recEl.style.display = rec ? 'block' : 'none';
-    }
-
-    Object.keys(ids).forEach(function (k) {
-      document.getElementById(k).addEventListener('input', update);
-    });
-
-    // Decorative petals for the mandala
+    // Generate decorative petals for the mandala
     var petals = document.getElementById('petals');
-    var NS = 'http://www.w3.org/2000/svg';
-    for (var i = 0; i < 16; i++) {
-      var p = document.createElementNS(NS, 'ellipse');
-      p.setAttribute('cx', '100');
-      p.setAttribute('cy', '40');
-      p.setAttribute('rx', '10');
-      p.setAttribute('ry', '26');
-      p.setAttribute('transform', 'rotate(' + (i * 22.5) + ' 100 100)');
-      petals.appendChild(p);
+    if (petals) {
+      var NS = 'http://www.w3.org/2000/svg';
+      for (var i = 0; i < 16; i++) {
+        var p = document.createElementNS(NS, 'ellipse');
+        p.setAttribute('cx', '100');
+        p.setAttribute('cy', '40');
+        p.setAttribute('rx', '10');
+        p.setAttribute('ry', '26');
+        p.setAttribute('transform', 'rotate(' + (i * 22.5) + ' 100 100)');
+        petals.appendChild(p);
+      }
     }
 
     // Sparkles scattered over the card
@@ -493,43 +340,6 @@
       sp.style.animationDelay = (idx * 0.45) + 's';
       card.appendChild(sp);
     });
-
-    // Themes
-    var themes = {
-      maroon: ['#5c0f1c', '#2b0710', '#d4af37'],
-      navy: ['#14285a', '#070f24', '#e8c766'],
-      emerald: ['#0f4a3a', '#052219', '#e3c776'],
-      saffron: ['#b5520f', '#5a2206', '#ffe08a']
-    };
-    var swatches = document.querySelectorAll('.swatch');
-    swatches.forEach(function (sw) {
-      sw.addEventListener('click', function () {
-        var t = sw.getAttribute('data-theme');
-        swatches.forEach(function (s) {
-          s.classList.remove('active');
-          s.setAttribute('aria-checked', 'false');
-        });
-        sw.classList.add('active');
-        sw.setAttribute('aria-checked', 'true');
-        var c = themes[t];
-        card.style.setProperty('--c1', c[0]);
-        card.style.setProperty('--c2', c[1]);
-        card.style.setProperty('--accent', c[2]);
-      });
-    });
-
-    document.getElementById('reset').addEventListener('click', function () {
-      Object.keys(ids).forEach(function (k) {
-        document.getElementById(k).value = defaults[k];
-      });
-      update();
-    });
-
-    document.getElementById('print').addEventListener('click', function () {
-      window.print();
-    });
-
-    update();
   })();
 </script>
 </body>
