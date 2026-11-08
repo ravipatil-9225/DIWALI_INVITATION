@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shubh Deepavali — Patil Family</title>
+<title>Shubh Deepavali — To Everyone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@400;600;700&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
@@ -13,10 +13,35 @@
     --gold-light: #f5e6a8;
     --gold-deep: #9a7b1c;
     --cream: #fff8ec;
-    --c1: #5c0f1c;
-    --c2: #2b0710;
-    --accent: #d4af37;
+    --bg-ambient: #2d180f;
     color-scheme: dark;
+  }
+
+  /* ═══════════════════════════════════════════════
+     3 DISTINCT COLOR TEMPLATES (Red, Blue, Orange)
+     ═══════════════════════════════════════════════ */
+  /* 1. Ruby Red (Maroon & Warm Gold) */
+  .theme-red, .card.theme-red {
+    --c1: #5c0f1c;
+    --c2: #24050b;
+    --accent: #d4af37;
+    --glow: rgba(92, 15, 28, 0.45);
+  }
+
+  /* 2. Royal Blue (Sapphire Navy & Champagne Gold) */
+  .theme-blue, .card.theme-blue {
+    --c1: #122554;
+    --c2: #060e22;
+    --accent: #e8c766;
+    --glow: rgba(18, 37, 84, 0.55);
+  }
+
+  /* 3. Festive Orange (Saffron & Marigold Gold) */
+  .theme-orange, .card.theme-orange {
+    --c1: #b24d08;
+    --c2: #4a1c03;
+    --accent: #ffd166;
+    --glow: rgba(178, 77, 8, 0.5);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,13 +53,15 @@
 
   body {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    background: radial-gradient(circle at 50% 18%, #2d180f 0%, #140b06 65%, #080402 100%);
+    background: radial-gradient(circle at 50% 18%, var(--bg-ambient, #2d180f) 0%, #0d0704 68%, #050201 100%);
     color: #fff6dc;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: clamp(16px, 4vw, 36px);
     overflow-x: hidden;
+    transition: background 0.6s ease;
   }
 
   /* Centered Card Stage */
@@ -42,8 +69,9 @@
     width: 100%;
     max-width: 520px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .card {
@@ -54,9 +82,9 @@
     overflow: hidden;
     background:
       radial-gradient(circle at 50% 0%, rgba(255, 214, 102, .38), transparent 55%),
-      linear-gradient(160deg, var(--c1), var(--c2));
+      linear-gradient(160deg, var(--c1, #5c0f1c), var(--c2, #24050b));
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75),
-                0 0 45px rgba(212, 175, 55, 0.2),
+                0 0 50px var(--glow, rgba(212, 175, 55, 0.2)),
                 inset 0 0 0 1px rgba(245, 230, 168, 0.45);
     color: #fff6dc;
     text-align: center;
@@ -66,13 +94,13 @@
     justify-content: space-between;
     padding: clamp(24px, 6cqi, 44px) clamp(20px, 7cqi, 42px);
     container-type: inline-size;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.5s ease, background 0.6s ease;
   }
 
   .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 35px 95px rgba(0, 0, 0, 0.85),
-                0 0 60px rgba(212, 175, 55, 0.3),
+                0 0 65px var(--glow, rgba(212, 175, 55, 0.3)),
                 inset 0 0 0 1px rgba(245, 230, 168, 0.6);
   }
 
@@ -262,8 +290,59 @@
     50% { opacity: 0.95; transform: scale(1); }
   }
 
+  /* ═══════════════════════════════════════════════
+     THEME SELECTOR DOTS (Red, Blue, Orange)
+     ═══════════════════════════════════════════════ */
+  .theme-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    padding: 6px 16px;
+    background: rgba(18, 12, 10, 0.65);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  }
+
+  .theme-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 230, 168, 0.4);
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+    padding: 0;
+    outline: none;
+  }
+
+  .theme-dot.dot-red {
+    background: radial-gradient(circle at 35% 35%, #8f172b, #4a0914);
+  }
+  .theme-dot.dot-blue {
+    background: radial-gradient(circle at 35% 35%, #234cb3, #0d1b3d);
+  }
+  .theme-dot.dot-orange {
+    background: radial-gradient(circle at 35% 35%, #ea6914, #873403);
+  }
+
+  .theme-dot:hover {
+    transform: scale(1.18);
+    border-color: #fff2b8;
+  }
+
+  .theme-dot.active {
+    border-color: #fff6d0;
+    transform: scale(1.24);
+    box-shadow: 0 0 14px var(--gold);
+  }
+
   @media print {
     body { background: none; padding: 0; }
+    .theme-bar { display: none !important; }
     .card { box-shadow: none; max-width: none; width: 100%; height: 100vh; border-radius: 0; }
     @page { size: A5 portrait; margin: 0; }
   }
@@ -272,7 +351,7 @@
 <body>
 
 <main class="card-container">
-  <article class="card" id="card">
+  <article class="card theme-red" id="card">
     <!-- Spinning Festive Mandala Background -->
     <svg class="mandala" viewBox="0 0 200 200" aria-hidden="true">
       <g fill="none" stroke="#f5e6a8" stroke-width="0.8">
@@ -289,7 +368,7 @@
 
     <div class="title-block">
       <h3>Shubh Deepavali</h3>
-      <div class="family">TO EVERYONE</div>
+      <div class="family" id="pv-family">TO EVERYONE</div>
     </div>
 
     <p class="msg">May the festival of lights fill your home with joy, prosperity, and endless blessings.</p>
@@ -309,11 +388,85 @@
       </div>
     </div>
   </article>
+
+  <!-- Color Switcher Dots (Red, Blue, Orange) -->
+  <nav class="theme-bar" aria-label="Color theme switcher">
+    <button class="theme-dot dot-red active" data-theme="red" title="Ruby Red Theme" aria-label="Ruby Red Theme"></button>
+    <button class="theme-dot dot-blue" data-theme="blue" title="Royal Blue Theme" aria-label="Royal Blue Theme"></button>
+    <button class="theme-dot dot-orange" data-theme="orange" title="Saffron Orange Theme" aria-label="Saffron Orange Theme"></button>
+  </nav>
 </main>
 
 <script>
   (function () {
     var card = document.getElementById('card');
+
+    // ═══════════════════════════════════════════════
+    // 3 THEMES DEFINITION (Red, Blue, Orange)
+    // ═══════════════════════════════════════════════
+    var THEMES = [
+      { name: 'red', ambient: '#2e0d14' },
+      { name: 'blue', ambient: '#0a142c' },
+      { name: 'orange', ambient: '#2f1404' }
+    ];
+
+    // Check URL parameters: e.g. ?theme=blue or ?to=Aai
+    var urlParams = new URLSearchParams(window.location.search);
+    var selectedTheme = urlParams.get('theme') || urlParams.get('color');
+
+    // Personalized recipient support: e.g. ?to=Friends or ?name=Sharma+Family
+    var recipient = urlParams.get('to') || urlParams.get('for') || urlParams.get('name');
+    var familyEl = document.getElementById('pv-family');
+    if (familyEl) {
+      if (recipient && recipient.trim()) {
+        familyEl.textContent = 'TO ' + recipient.trim().toUpperCase();
+      } else {
+        familyEl.textContent = 'TO EVERYONE';
+      }
+    }
+
+    // ═══════════════════════════════════════════════
+    // ALTERNATING LOGIC:
+    // Every visit alternates between Red -> Blue -> Orange
+    // ═══════════════════════════════════════════════
+    if (!selectedTheme || !THEMES.some(function(t) { return t.name === selectedTheme.toLowerCase(); })) {
+      var lastIndex = parseInt(localStorage.getItem('diwali_theme_idx'), 10);
+      if (isNaN(lastIndex)) {
+        lastIndex = 0;
+      } else {
+        lastIndex = (lastIndex + 1) % THEMES.length;
+      }
+      localStorage.setItem('diwali_theme_idx', lastIndex.toString());
+      selectedTheme = THEMES[lastIndex].name;
+    } else {
+      selectedTheme = selectedTheme.toLowerCase();
+    }
+
+    function applyTheme(themeName) {
+      THEMES.forEach(function (t) {
+        card.classList.remove('theme-' + t.name);
+      });
+      var found = THEMES.find(function (t) { return t.name === themeName; }) || THEMES[0];
+      card.classList.add('theme-' + found.name);
+      document.body.style.setProperty('--bg-ambient', found.ambient);
+
+      // Update dot active indicator
+      var dots = document.querySelectorAll('.theme-dot');
+      dots.forEach(function (dot) {
+        dot.classList.toggle('active', dot.getAttribute('data-theme') === found.name);
+      });
+    }
+
+    // Apply the determined alternate theme
+    applyTheme(selectedTheme);
+
+    // Allow user to manually tap any theme dot to switch colors
+    document.querySelectorAll('.theme-dot').forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        var t = dot.getAttribute('data-theme');
+        applyTheme(t);
+      });
+    });
 
     // Generate decorative petals for the mandala
     var petals = document.getElementById('petals');
